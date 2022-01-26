@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.sd.spartan.signcompose.composables.LoginPage1
+import com.sd.spartan.signcompose.composables.OnBoardingPage
 import com.sd.spartan.signcompose.ui.theme.SignComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -25,6 +26,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     LoginPage1()
+//                    OnBoardingPage()
                 }
             }
         }

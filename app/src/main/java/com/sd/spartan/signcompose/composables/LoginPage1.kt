@@ -42,31 +42,33 @@ import com.sd.spartan.signcompose.ui.theme.*
 @Preview(showBackground = true)
 @Composable
 fun LoginPage1(){
+    Box {
+        BgCart()
+        MainCart()
+    }
+}
+
+@Composable
+fun BgCart(){
     val signUpText = buildAnnotatedString {
         append("Don't have an Account?")
         withStyle(SpanStyle(color = Oranglish)){
             append("Sign up here")
         }
     }
-
-    Box {
-        Surface(color = Purplish, modifier = Modifier.fillMaxSize()) {
-            Column(verticalArrangement = Arrangement.Bottom, horizontalAlignment = Alignment.CenterHorizontally,
+    Surface(color = Purplish, modifier = Modifier.fillMaxSize()) {
+        Column(verticalArrangement = Arrangement.Bottom, horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.offset(y=(-30).dp)) {
-                Row() {
-                    Image(painter = painterResource(id = R.drawable.ic_fb), contentDescription = "")
-                    Spacer(modifier = Modifier.padding(horizontal = 4.dp))
-                    Image(painter = painterResource(id = R.drawable.ic_google), contentDescription = "")
-                    Spacer(modifier = Modifier.padding(horizontal = 4.dp))
-                    Image(painter = painterResource(id = R.drawable.ic_twitter), contentDescription = "")
-                }
-                Spacer(modifier = Modifier.padding(vertical = 8.dp))
-                Text(text = signUpText, color = Color.White)
+            Row() {
+                Image(painter = painterResource(id = R.drawable.ic_fb), contentDescription = "")
+                Spacer(modifier = Modifier.padding(horizontal = 4.dp))
+                Image(painter = painterResource(id = R.drawable.ic_google), contentDescription = "")
+                Spacer(modifier = Modifier.padding(horizontal = 4.dp))
+                Image(painter = painterResource(id = R.drawable.ic_twitter), contentDescription = "")
             }
-
+            Spacer(modifier = Modifier.padding(vertical = 8.dp))
+            Text(text = signUpText, color = Color.White)
         }
-
-        MainCart()
 
     }
 }
